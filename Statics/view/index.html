@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>导航</title>
+  <link rel="stylesheet"	type="text/css"	href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+  <script src="//unpkg.com/layui@2.6.8/dist/layui.js"	type="text/javascript"	charset="utf-8"></script>
+</head>
+<body>
+<ul class="layui-nav	layui-bg-cyan" lay-filter="">
+  <li class="layui-nav-item"><a href="http://localhost:8088/wonder">想去的地方</a></li>
+  <li class="layui-nav-item layui-this"><a href="https://sz1hyrvj9t.feishu.cn/drive/folder/fldcnEg7oMAho156TH6HEXFeCmc">随记</a></li>
+  <li class="layui-nav-item"><a href="https://sz1hyrvj9t.feishu.cn/drive/folder/fldcnnF5xrKdP1NDdJKEuHHk3Yb">一些</a></li>
+  <li class="layui-nav-item">
+	<a href="javascript:;">关于我</a>
+	<dl class="layui-nav-child"> <!-- 二级菜单 -->
+	  <dd><a href="https://sz1hyrvj9t.feishu.cn/docx/DLzVdIJlwoexsOxK560c0zX6nrb">过去</a></dd>
+	  <dd><a href="">现在</a></dd>
+	  <dd><a href="">未来</a></dd>
+	</dl>
+  </li>
+  <li class="layui-nav-item"><a href="http://localhost:8088/comment">对我说</a></li>
+</ul>
+
+
+<a	href="">
+	<img src="https://pic.3gbizhi.com/2021/1228/20211228074310530.jpg"	onresize="Animation"	style="width: 2000px;"/>
+</a>
+
+	 
+	<script>
+	//注意：导航 依赖 element 模块，否则无法进行功能性操作
+	layui.use('element', function(){
+	  var element = layui.element;
+	  
+	  //…
+	});
+	</script>
+	<script>
+		layer.msg('Welcome',	{icon:	1});
+	</script>
+</body>
+</html>

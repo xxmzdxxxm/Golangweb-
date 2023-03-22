@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>导航</title>
+  <link rel="stylesheet"	type="text/css"	href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+  <script src="//unpkg.com/layui@2.6.8/dist/layui.js"	type="text/javascript"	charset="utf-8"></script>
+</head>
+<body>
+ 
+<table id="demo" lay-filter="test"></table>
+ 
+<script src="/layui/layui.js"></script>
+<script>
+layui.use('table', function(){
+  var table = layui.table;
+  table.render({
+    elem: '#demo'
+    ,height: 800
+    ,url: '/arr/user.json' //数据接口
+    ,page: true //开启分页
+    ,cols: [[ //表头
+      {field: 'ID', title: 'ID', width:80, sort: true, fixed: 'left'}
+      ,{field: 'CreatedAt', title: '创建时间', width:150}
+      ,{field: 'UpdatedAt', title: '更新时间', width:150, sort: true}
+      ,{field: 'DeletedAt', title: '删除时间', width:150} 
+      ,{field: 'Place', title: '地点', width: 177}
+      ,{field: 'Did', title: '去过', width: 80, sort: true}
+      ,{field: 'Who', title: '和谁', width: 80, sort: true}
+    ]]
+  });
+  
+});
+</script>
+
+<form action="/select" method="post">
+  查询ID:<input type="text" name="ID">
+  <input type="submit" value="查询">
+</form>
+
+
+
+</body>
+</html>
